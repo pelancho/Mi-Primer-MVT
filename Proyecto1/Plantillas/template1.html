@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mipaginaweb</title>
+</head>
+<body>
+    EXCELENTE ES MUY FACIL USAR PLANTILLAS 
+    <p> Nombre = {{nombre}}        </p>
+    <p> Apellido = {{apellido}} </p>
+
+    <p style="color:red"> {{nombre}} 
+    </p><p style="color:red"> {{apellido}}
+    
+    
+    </p><h2>LISTA DE NOTAS</h2>
+       {% for nota in lista %}
+       
+            {% if nota < 6 %}
+
+               <p style="color:red">DESAPROBADO= {{nota}}
+               </p>{% else %}<p style="color:green">APROBADO= {{nota}}</p>
+
+            {% endif %}
+
+       {% endfor %}
+    
+    
+    </p><h2>LISTA DE COMIDAS</h2>
+   
+    {% for comida in listaC %}
+      <p style="color:rgb(140, 0, 0)">Comida: {{comida}}
+
+    Familiar 1 ={{familiar.nombre}},{{familiar.apellido}},{{familiar.edad}}
+
+    {% endfor %}
+
+</p><h2>LISTA 2 DE NOTAS</h2>
+{% for nota2 in listanotas %}
+       
+{% if nota2 < 6 %}
+
+   <p style="color:red">DESAPROBADO= {{nota2}}
+   </p>{% else %}<p style="color:green">APROBADO= {{nota2}}</p>
+
+{% endif %}
+
+{% endfor %}
+
+
+
+</body>
+</html>
